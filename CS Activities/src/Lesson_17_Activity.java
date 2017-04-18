@@ -43,13 +43,13 @@ public class Lesson_17_Activity
 			int maxIndex = length-1;
 			int median = a[length/2];
 			int medIndex = length/2;
-			
+			/*
 			System.out.println("minimum: " + minimum);
 			System.out.println("median: " + median);
 			System.out.println("maximum: " + maximum);
 			System.out.println("length: " + length);
 			System.out.println("half: " + half);
-			
+			*/
 			if(x == maximum)
 				answer = maxIndex;
 			if(x == minimum)
@@ -58,11 +58,17 @@ public class Lesson_17_Activity
 				answer = medIndex;
 			if(x < maximum && x > median)
 			{
-				
+				for(int i = median; i < maximum; i++)
+				{
+					if(a[i] == x) return i;
+				}
 			}
 			if(x < median && x > minimum)
 			{
-				
+				for(int i = minimum; i < median; i++)
+				{
+					if(a[i] == x) return i;
+				}
 			}
 			
 			/*
